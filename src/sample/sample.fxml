@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" style="-fx-background-color: #e3e3e3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox layoutY="50.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #b0abab;">
+         <children>
+            <HBox prefHeight="83.0" prefWidth="800.0" spacing="10.0">
+               <children>
+                  <Label text="Введите размер кисти и ее цвет">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+                  <ColorPicker fx:id="colorPicker">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets top="5.0" />
+                     </opaqueInsets>
+                  </ColorPicker>
+                  <TextField fx:id="brushSize" prefHeight="26.0" prefWidth="62.0" text="20">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets top="5.0" />
+                     </opaqueInsets>
+                  </TextField>
+                  <Button fx:id="clearButton" mnemonicParsing="false" onAction="#isClearButtonTyped" prefHeight="43.0" prefWidth="107.0" text="Очистить">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="triangleButton" mnemonicParsing="false" onAction="#nakeTriangle" prefHeight="42.0" prefWidth="102.0" text="Треугольник">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="rectangleButton" mnemonicParsing="false" onAction="#makeRectangle" prefHeight="43.0" prefWidth="62.0" text="Квадрат">
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="circleButton" mnemonicParsing="false" onAction="#makeCircle" prefHeight="44.0" prefWidth="49.0" text="Круг">
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Canvas fx:id="canvas" height="541.0" layoutY="100.0" width="800.0" />
+      <VBox prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #696969;">
+         <children>
+            <Label alignment="CENTER" prefHeight="54.0" prefWidth="799.0" text="Лабораторная работа 8: Дюпин Андрей ИСТ - 921" textFill="#f27b7b">
+               <font>
+                  <Font name="Berlin Sans FB" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</Pane>
